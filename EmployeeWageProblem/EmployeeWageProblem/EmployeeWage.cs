@@ -9,6 +9,7 @@ namespace EmployeeWageProblem
     public class EmployeeWage
     {
         int fullTime = 1;
+        int partTime = 0;
         int empHrs = 0;
         int empRateHrs = 20;
         int empwage = 0;
@@ -21,11 +22,10 @@ namespace EmployeeWageProblem
             {
                 empHrs = 8;
             }
-            else
+            else if (check == partTime)
             {
-                empHrs = 0;
+                empHrs = 4;
             }
-
             empwage = empRateHrs * empHrs;
             Console.WriteLine($"Employee Wage is : {empwage}");
         }
