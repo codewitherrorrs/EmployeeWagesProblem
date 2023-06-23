@@ -5,7 +5,7 @@
         public static void Main(string[] args)
         {
             EmployeeWage employee = new EmployeeWage();
-            employee.Employee();
+            employee.switchCase();
         }
     }
 }

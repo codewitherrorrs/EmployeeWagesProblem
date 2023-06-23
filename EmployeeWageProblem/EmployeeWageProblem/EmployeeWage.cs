@@ -8,26 +8,28 @@ namespace EmployeeWageProblem
 {
     public class EmployeeWage
     {
-        int fullTime = 1;
-        int partTime = 0;
-        int empHrs = 0;
-        int empRateHrs = 20;
-        int empwage = 0;
-        public void Employee()
+        public const int isFullTime = 1;
+        public const int empRatePerHrs = 20;
+        public const int isPartTime = 2;
+        public void switchCase()
         {
+            int empHrs = 0;
+            int empWage = 0;
             Random random = new Random();
-            int check = random.Next(2);
+            int empCheck = random.Next(3);
 
-            if (check == fullTime)
+            switch (empCheck)
             {
-                empHrs = 8;
+                case isFullTime:
+                    empHrs = 8;
+                    break;
+                case isPartTime:
+                    empHrs = 4;
+                    break;
+                default:
+                    empHrs = 0;
+                    break;
             }
-            else if (check == partTime)
-            {
-                empHrs = 4;
-            }
-            empwage = empRateHrs * empHrs;
-            Console.WriteLine($"Employee Wage is : {empwage}");
         }
     }
 }
