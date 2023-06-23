@@ -8,20 +8,26 @@ namespace EmployeeWageProblem
 {
     public class EmployeeWage
     {
-        public static void Employee()
+        int fullTime = 1;
+        int empHrs = 0;
+        int empRateHrs = 20;
+        int empwage = 0;
+        public void Employee()
         {
             Random random = new Random();
             int check = random.Next(2);
-            int fulltime = 1;
 
-            if (check == fulltime)
+            if (check == fullTime)
             {
-                Console.WriteLine("Employee is Present");
+                empHrs = 8;
             }
             else
             {
-                Console.WriteLine("Employee is Absent");
+                empHrs = 0;
             }
+
+            empwage = empRateHrs * empHrs;
+            Console.WriteLine($"Employee Wage is : {empwage}");
         }
     }
 }
